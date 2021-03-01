@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Feb 2021 16:19:18 +0100</lastBuildDate><atom:link href="https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Organització del proyecte</title>
+      <link>https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/my-first-post/</link>
+      <pubDate>Thu, 25 Feb 2021 16:19:18 +0100</pubDate>
+      
+      <guid>https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/my-first-post/</guid>
+      <description>La nostra organització per el projecte serà la següent:
+  Primer personalitzarem el domini (posant-li un nom i definint l&amp;rsquo;estructura de com crearem els correus)
+  Després buscarem informació sobre com crear certificats servidor-client i els crearem
+  Després farem una proba a dintre de dmzf amb el docker. Crearem els usuaris amb ordres i automàticament i, per finalitzar, comprobarem que podem enviar mails a usuaris de google, thunderbird etc.</description>
+    </item>
+    
+  </channel>
+</rss>
