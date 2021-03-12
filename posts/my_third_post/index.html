@@ -59,7 +59,7 @@
   "headline": "Progrés de la segona setmana",
   "description" : "Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m\u0026rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:\n\u0026ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en \/etc\/hosts en la màquina base per que sigui inte.",
   "inLanguage" : "en",
-  "wordCount":  336 ,
+  "wordCount":  342 ,
   "datePublished" : "2021-03-11T16:12:30",
   "dateModified" : "2021-03-11T16:12:30",
   "image" : "https:\/\/cf19santiago.github.io\/cf19santiago-Projecte5_Blog3\/",
@@ -227,15 +227,19 @@ En &quot;Intermediate certificate&quot; l'archiu .pem (sense el key)
 
 I en &quot;Intermediate certificate&quot; l'archiu .pem que hem posat en &quot;Intermediate certificate&quot;
 </code></pre>
-<p>Una vegada instalat vaig posarme a desxifrar com funcionen les comandes:</p>
+<p>Una vegada instalat vaig posarme a desxifrar com funcionen les comandes &ldquo;curl&rdquo; per gestionar el servidor poste:</p>
 <p>CREAR USUARIS</p>
-<p>curl -v -k -u &ldquo;administrador del domini poste&rdquo;:&ldquo;la seva contrasenya&rdquo; -d &lsquo;name=&ldquo;Nom que li vols posar&rdquo;&amp;email=&ldquo;mail que vols que tingui&rdquo;&amp;passwordPlaintext=&ldquo;la contrasenya que vols que tingui&rdquo;&rsquo; https://&ldquo;ip de la màquina on està el contenidor docker&rdquo;/admin/api/v1/boxes</p>
+<pre><code>curl -v -k -u &quot;administrador del domini poste&quot;:&quot;la seva contrasenya&quot; -d 'name=&quot;Nom que li vols posar&quot;&amp;email=&quot;mail que vols que tingui&quot;&amp;passwordPlaintext=&quot;la contrasenya que vols que tingui&quot;' https://&quot;ip de la màquina on està el contenidor docker&quot;/admin/api/v1/boxes
+</code></pre>
 <p>ESBORRAR USUARIS</p>
-<p>curl -v -k -u &ldquo;administrador del domini poste&rdquo;:&ldquo;la seva contrasenya&rdquo; -X &ldquo;DELETE&rdquo; https://ip de la màquina on està el contenidor docker/admin/api/v1/boxes/&ldquo;usuari a esborrar@domini&rdquo;</p>
+<pre><code>curl -v -k -u &quot;administrador del domini poste&quot;:&quot;la seva contrasenya&quot; -X &quot;DELETE&quot; https://ip de la màquina on està el contenidor docker/admin/api/v1/boxes/&quot;usuari a esborrar@domini&quot;
+</code></pre>
 <p>CANVIAR LA CONTRASENYA</p>
-<p>curl -v -k -u &ldquo;administrador del domini poste&rdquo;:&ldquo;la seva contrasenya&rdquo; -X &ldquo;PATCH&rdquo; -d &ldquo;passwordPlaintext=(la nova contrasenya)&rdquo; https://&ldquo;ip de la màquina on esta el contenidor docker&rdquo;/admin/api/v1/boxes/&ldquo;usuari al que vols canviar la contrasenya@domini&rdquo;</p>
+<pre><code>curl -v -k -u &quot;administrador del domini poste&quot;:&quot;la seva contrasenya&quot; -X &quot;PATCH&quot; -d &quot;passwordPlaintext=(la nova contrasenya)&quot; https://&quot;ip de la màquina on esta el contenidor docker&quot;/admin/api/v1/boxes/&quot;usuari al que vols canviar la contrasenya@domini&quot;
+</code></pre>
 <p>CREAR UN NOU DOMINI</p>
-<p>curl -v -k -u &ldquo;administrador del domini poste&rdquo;:&ldquo;la seva contrasenya&rdquo; -d &lsquo;name=nom del nou domini&rsquo; https://&ldquo;ip de la màquina amb el contenidor docker&rdquo;/admin/api/v1/domains</p>
+<pre><code>curl -v -k -u &quot;administrador del domini poste&quot;:&quot;la seva contrasenya&quot; -d 'name=nom del nou domini' https://&quot;ip de la màquina amb el contenidor docker&quot;/admin/api/v1/domains
+</code></pre>
 
 
         
