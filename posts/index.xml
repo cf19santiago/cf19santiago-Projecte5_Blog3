@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Projecte5 Santiago Mail Server Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 15:07:55 +0100</lastBuildDate><atom:link href="https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 16:12:30 +0100</lastBuildDate><atom:link href="https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Progrés de la segona setmana</title>
+      <link>https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/my_third_post/</link>
+      <pubDate>Thu, 11 Mar 2021 16:12:30 +0100</pubDate>
+      
+      <guid>https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/my_third_post/</guid>
+      <description>Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&amp;rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:
+&amp;ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en /etc/hosts en la màquina base per que sigui inte.</description>
+    </item>
+    
     <item>
       <title>Progrés de la primera setmana</title>
       <link>https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/my-second-post/</link>
