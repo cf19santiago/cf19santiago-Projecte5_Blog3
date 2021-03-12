@@ -218,7 +218,7 @@
       <article role="main" class="blog-post">
         <p>Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:</p>
 <p>&ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en  /etc/hosts en la màquina base per que sigui inte.pastor.edu. Aixó fa que la web tingui el nom de inte.pastor.edu al buscarla desde el buscador de base.</p>
-<p>&ndash; Després vaig instalar mkcert a base amb els pasos de la següent web: <a href="https://kifarunix.com/how-to-create-self-signed-ssl-certificate-with-mkcert-on-ubuntu-18-04/">https://kifarunix.com/how-to-create-self-signed-ssl-certificate-with-mkcert-on-ubuntu-18-04/</a></p>
+<p>&ndash; Després vaig instalar mkcert a base amb els pasos de la següent web: <a href="https://github.com/FiloSottile/mkcert">https://github.com/FiloSottile/mkcert</a></p>
 <p>&ndash; Al acabar d&rsquo;installar el cert vaig fer mkcert -install (et genera certificats locals) i després &ldquo;mkcert 15.5.2.14 inte.pastor.edu&rdquo; (aixó fa certificats que serveixen per a quan busquem el poste.io amb la ip de inte o amb el nom de la web especificat en /etc/hosts)</p>
 <p>&ndash; Quan es van acabar de crear vaig anar al servidor poste en la secció de &ldquo;TLS certificates&rdquo; i vaig posar:</p>
 <pre><code>La clau *key.pem en &quot;Private part of certificate&quot;

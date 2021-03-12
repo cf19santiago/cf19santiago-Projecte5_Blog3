@@ -1,0 +1,46 @@
+---
+title: "Progrés de la segona setmana"
+date: 2021-03-11T16:12:30+01:00
+draft: false
+---
+
+Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m'ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes: 
+
+
+-- Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en  /etc/hosts en la màquina base per que sigui inte.pastor.edu. Aixó fa que la web tingui el nom de inte.pastor.edu al buscarla desde el buscador de base.
+
+-- Després vaig instalar mkcert a base amb els pasos de la següent web: https://kifarunix.com/how-to-create-self-signed-ssl-certificate-with-mkcert-on-ubuntu-18-04/
+
+-- Al acabar d'installar el cert vaig fer mkcert -install (et genera certificats locals) i després "mkcert 15.5.2.14 inte.pastor.edu" (aixó fa certificats que serveixen per a quan busquem el poste.io amb la ip de inte o amb el nom de la web especificat en /etc/hosts)
+
+-- Quan es van acabar de crear vaig anar al servidor poste en la secció de "TLS certificates" i vaig posar:
+
+	La clau *key.pem en "Private part of certificate"
+	
+	En "Intermediate certificate" l'archiu .pem (sense el key)
+	
+	I en "Intermediate certificate" l'archiu .pem que hem posat en "Intermediate certificate"
+
+Una vegada instalat vaig posarme a desxifrar com funcionen les comandes:
+
+CREAR USUARIS
+
+curl -v -k -u "administrador del domini poste":"la seva contrasenya" -d 'name="Nom que li vols posar"&email="mail que vols que tingui"&passwordPlaintext="la contrasenya que vols que tingui"' https://"ip de la màquina on està el contenidor docker"/admin/api/v1/boxes
+
+ESBORRAR USUARIS
+
+curl -v -k -u "administrador del domini poste":"la seva contrasenya" -X "DELETE" https://ip de la màquina on està el contenidor docker/admin/api/v1/boxes/"usuari a esborrar@domini"
+
+CANVIAR LA CONTRASENYA
+
+curl -v -k -u "administrador del domini poste":"la seva contrasenya" -X "PATCH" -d "passwordPlaintext=(la nova contrasenya)" https://"ip de la màquina on esta el contenidor docker"/admin/api/v1/boxes/"usuari al que vols canviar la contrasenya@domini"
+
+CREAR UN NOU DOMINI
+
+curl -v -k -ucurl -v -k -u admin@pastor.edu:MaNF48Fc -d 'name=gonzalez.edu' https://10.5.2.14/admin/api/v1/domains
+ admin@pastor.edu:MaNF48Fc -d 'name=gonzalez.edu' https://10.5.2.14/admin/api/v1/domains
+
+
+
+
+
