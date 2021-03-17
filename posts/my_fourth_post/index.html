@@ -229,23 +229,13 @@ docker volume create volum_mail_server docker run -p 443:443 -p 25:25 -p 110:110
 docker run -p 443:443 -p 25:25 -p 110:110 -p 143:143 -p 465:465 -p 587:587 -p 993:993 -p 995:995 -p 4190:4190  -e TZ=Europe/Andorra -v volum_mail_server:/data --name &quot;pastor.edu&quot; -h &quot;pastor.edu&quot; -t analogic/poste.io 
 </code></pre>
 <ul>
-<li>
-<p>Aquesta ordre ens permet crear un contenidor docker amb tots els ports oberts (que s&rsquo;utilitzin per aplicacións mail.)</p>
-</li>
-<li>
-<p>Al acabar el pas anterior, vaig configurar el server i instalar el certificats.</p>
-</li>
+<li>Aquesta ordre ens permet crear un contenidor docker amb tots els ports oberts (que s&rsquo;utilitzin per aplicacións mail.)</li>
 </ul>
+<p>-Al acabar el pas anterior, vaig configurar el server i instalar el certificats.</p>
 <p>Per finalitzar, vaig instalar thunderbird a clase i vaig configurarlo:</p>
 <p>-Per configurar-lo vaig entrar al thunderbird desde base i vaig iniciar sessió amb el meu usuari del poste server (posant el seu nom, mail i contrasenya).</p>
-<ul>
-<li>
-<p>Després vaig clicar al botó de configuració de server i en el camp &ldquo;server&rdquo; vaig posar la ip de la màquina que conté el server (en aquest cas la de dmze) i vaig clicar al botó re-test (fa la comprobació de que hi hagi conexió).</p>
-</li>
-<li>
-<p>Al acabar vaig clicar a &ldquo;done&rdquo;. Al clicar al botó va surtir una pestanya que deia que el certificat del server era insegur i que si volia fer una excepció (clarament que la vaig fer). Va entrar directament a la safata del usuari escollit.</p>
-</li>
-</ul>
+<p>-Després vaig clicar al botó de configuració de server i en el camp &ldquo;server&rdquo; vaig posar la ip de la màquina que conté el server (en aquest cas la de dmze) i vaig clicar al botó re-test (fa la comprobació de que hi hagi conexió).</p>
+<p>-Al acabar vaig clicar a &ldquo;done&rdquo;. Al clicar al botó va surtir una pestanya que deia que el certificat del server era insegur i que si volia fer una excepció (clarament que la vaig fer). Va entrar directament a la safata del usuari escollit.</p>
 
 
         
