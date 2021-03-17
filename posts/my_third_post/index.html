@@ -59,7 +59,7 @@
   "headline": "Progrés de la segona setmana",
   "description" : "Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m\u0026rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:\n\u0026ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en \/etc\/hosts en la màquina base per que sigui inte.",
   "inLanguage" : "en",
-  "wordCount":  342 ,
+  "wordCount":  336 ,
   "datePublished" : "2021-03-11T16:12:30",
   "dateModified" : "2021-03-11T16:12:30",
   "image" : "https:\/\/cf19santiago.github.io\/cf19santiago-Projecte5_Blog3\/",
@@ -218,7 +218,7 @@
       <article role="main" class="blog-post">
         <p>Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:</p>
 <p>&ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en  /etc/hosts en la màquina base per que sigui inte.pastor.edu. Aixó fa que la web tingui el nom de inte.pastor.edu al buscarla desde el buscador de base.</p>
-<p>&ndash; Després vaig instalar mkcert a base amb els pasos de la següent web: <a href="https://github.com/FiloSottile/mkcert">https://github.com/FiloSottile/mkcert</a></p>
+<p>&ndash; Després vaig instalar mkcert a base amb els pasos de la següent web: <a href="https://kifarunix.com/how-to-create-self-signed-ssl-certificate-with-mkcert-on-ubuntu-18-04/">https://kifarunix.com/how-to-create-self-signed-ssl-certificate-with-mkcert-on-ubuntu-18-04/</a></p>
 <p>&ndash; Al acabar d&rsquo;installar el cert vaig fer mkcert -install (et genera certificats locals) i després &ldquo;mkcert 15.5.2.14 inte.pastor.edu&rdquo; (aixó fa certificats que serveixen per a quan busquem el poste.io amb la ip de inte o amb el nom de la web especificat en /etc/hosts)</p>
 <p>&ndash; Quan es van acabar de crear vaig anar al servidor poste en la secció de &ldquo;TLS certificates&rdquo; i vaig posar:</p>
 <pre><code>La clau *key.pem en &quot;Private part of certificate&quot;
@@ -227,7 +227,7 @@ En &quot;Intermediate certificate&quot; l'archiu .pem (sense el key)
 
 I en &quot;Intermediate certificate&quot; l'archiu .pem que hem posat en &quot;Intermediate certificate&quot;
 </code></pre>
-<p>Una vegada instalat vaig posarme a desxifrar com funcionen les comandes &ldquo;curl&rdquo; per gestionar el servidor poste:</p>
+<p>Una vegada instalat vaig posarme a desxifrar com funcionen les comandes:</p>
 <p>CREAR USUARIS</p>
 <pre><code>curl -v -k -u &quot;administrador del domini poste&quot;:&quot;la seva contrasenya&quot; -d 'name=&quot;Nom que li vols posar&quot;&amp;email=&quot;mail que vols que tingui&quot;&amp;passwordPlaintext=&quot;la contrasenya que vols que tingui&quot;' https://&quot;ip de la màquina on està el contenidor docker&quot;/admin/api/v1/boxes
 </code></pre>
@@ -256,6 +256,10 @@ I en &quot;Intermediate certificate&quot; l'archiu .pem que hem posat en &quot;I
               <a href="https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/my-second-post/" data-toggle="tooltip" data-placement="top" title="Progrés de la primera setmana">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/my_fourth_post/" data-toggle="tooltip" data-placement="top" title="Progrés de la tercera setmana">Next Post &rarr;</a>
+            </li>
           
         </ul>
       
