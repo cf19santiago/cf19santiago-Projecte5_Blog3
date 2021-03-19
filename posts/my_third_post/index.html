@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Progrés de la segona setmana - Projecte5 Santiago Mail Server Blog</title>
-  <meta name="description" content="Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:
+  <meta name="description" content="Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes, crear nous dominis i consultar tant dominis com usuaris amb comandes:
 &ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en /etc/hosts en la màquina base per que sigui inte."><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -57,9 +57,9 @@
     "name" : ""
   },
   "headline": "Progrés de la segona setmana",
-  "description" : "Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m\u0026rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:\n\u0026ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en \/etc\/hosts en la màquina base per que sigui inte.",
+  "description" : "Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m\u0026rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes, crear nous dominis i consultar tant dominis com usuaris amb comandes:\n\u0026ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en \/etc\/hosts en la màquina base per que sigui inte.",
   "inLanguage" : "en",
-  "wordCount":  336 ,
+  "wordCount":  382 ,
   "datePublished" : "2021-03-11T16:12:30",
   "dateModified" : "2021-03-11T16:12:30",
   "image" : "https:\/\/cf19santiago.github.io\/cf19santiago-Projecte5_Blog3\/",
@@ -79,7 +79,7 @@
 </script>
 
 <meta property="og:title" content="Progrés de la segona setmana" />
-<meta property="og:description" content="Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:
+<meta property="og:description" content="Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes, crear nous dominis i consultar tant dominis com usuaris amb comandes:
 &ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en /etc/hosts en la màquina base per que sigui inte.">
 <meta property="og:url" content="https://cf19santiago.github.io/cf19santiago-Projecte5_Blog3/posts/my_third_post/" />
 <meta property="og:type" content="website" />
@@ -216,7 +216,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes i crear nous dominis amb comandes:</p>
+        <p>Aquesta setmana he avançat molt més que la setmana anterior. Bàsicament he canviat de nom la web del poste.io, he generat i instalat certificats per la mateixa. També m&rsquo;ha donat temps per averiguar com crear usuaris,esborrarlos,canviar les seves contrasenyes, crear nous dominis i consultar tant dominis com usuaris amb comandes:</p>
 <p>&ndash; Primer vaig canviar el nom de web de la màquina inte (Es la màquina en la que tinc la web ara) en  /etc/hosts en la màquina base per que sigui inte.pastor.edu. Aixó fa que la web tingui el nom de inte.pastor.edu al buscarla desde el buscador de base.</p>
 <p>&ndash; Després vaig instalar mkcert a base amb els pasos de la següent web: <a href="https://kifarunix.com/how-to-create-self-signed-ssl-certificate-with-mkcert-on-ubuntu-18-04/">https://kifarunix.com/how-to-create-self-signed-ssl-certificate-with-mkcert-on-ubuntu-18-04/</a></p>
 <p>&ndash; Al acabar d&rsquo;installar el cert vaig fer mkcert -install (et genera certificats locals) i després &ldquo;mkcert 15.5.2.14 inte.pastor.edu&rdquo; (aixó fa certificats que serveixen per a quan busquem el poste.io amb la ip de inte o amb el nom de la web especificat en /etc/hosts)</p>
@@ -239,6 +239,12 @@ I en &quot;Intermediate certificate&quot; l'archiu .pem que hem posat en &quot;I
 </code></pre>
 <p>CREAR UN NOU DOMINI</p>
 <pre><code>curl -v -k -u &quot;administrador del domini poste&quot;:&quot;la seva contrasenya&quot; -d 'name=nom del nou domini' https://&quot;ip de la màquina amb el contenidor docker&quot;/admin/api/v1/domains
+</code></pre>
+<p>CONSULTAR ELS DOMINIS:</p>
+<pre><code>curl -v -k -u &quot;administrador del domini poste&quot;:&quot;la seva contrasenya&quot; https://&quot;ip de la màquina amb el contenidor docker&quot;/admin/api/v1/domains
+</code></pre>
+<p>CONSULTAR ELS USUARIS:</p>
+<pre><code>curl -v -k -u &quot;administrador del domini poste&quot;:&quot;la seva contrasenya&quot;  https://&quot;ip de la màquina amb el contenidor&quot;/admin/api/v1/boxes
 </code></pre>
 
 
